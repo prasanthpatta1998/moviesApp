@@ -1,0 +1,119 @@
+.original-now-heading {
+  position: absolute;
+  left: 8.89%;
+  right: 68.61%;
+  top: 71.14%;
+  bottom: 26.05%;
+
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  /* identical to box height */
+
+  /* General/White */
+
+  color: #ffffff;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  height: 24px;
+  width: 24px;
+  font-size: 24px;
+  color: #131313;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 200;
+}
+
+.original-slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 32px;
+  padding-right: 32px;
+  margin-top: 32px;
+}
+
+.original-slick-container {
+  max-width: 360px;
+  margin-top: 10px;
+  margin-top: 12px;
+  position: absolute;
+  left: 8.89%;
+  right: 8.89%;
+  top: 76.97%;
+  bottom: 20.43%;
+}
+
+.original-logo-image {
+  margin: 0px 10px;
+  height: 64px;
+  width: 90px;
+  border-radius: 8px;
+}
+@media screen and (min-width: 768px) {
+  .original-slider {
+    margin-top: 0px;
+  }
+
+  .original-now-heading {
+    position: absolute;
+    left: 11.46%;
+    right: 11.46%;
+    top: 69.41%;
+    bottom: 28.1%;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 31px;
+  }
+  .original-logo-image {
+    height: 170px;
+    width: 250px;
+  }
+
+  .original-slick-container {
+    position: absolute;
+    left: 11.46%;
+    right: 11.46%;
+    top: 73.27%;
+    bottom: 16.66%;
+    max-width: 1000%;
+    margin-top: 24px;
+  }
+}
+
+.Original-loader-container {
+  position: absolute;
+  left: 8.89%;
+  right: 8.89%;
+  top: 75.84%;
+  bottom: 11.12%;
+  background: #0d0d0d;
+  border-radius: 4px;
+}
+
+.Original-loader {
+  margin-top: 35px;
+  margin-left: 130px;
+}
+
+@media screen and (min-width: 768px) {
+  .Original-loader-container {
+    position: absolute;
+    left: 11.53%;
+    right: 11.46%;
+    top: 71.08%;
+    bottom: 17.35%;
+    background: #0d0d0d;
+    border-radius: 8px;
+  }
+  .Original-loader {
+    margin-top: 69px;
+    margin-left: 538px;
+  }
+}

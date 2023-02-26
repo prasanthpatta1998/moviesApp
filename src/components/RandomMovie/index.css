@@ -1,0 +1,281 @@
+.random-image {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  height: 427px;
+  width: 360px;
+  top: 0%;
+}
+
+.random-image-backdrop {
+  display: none;
+}
+
+.random-heading {
+  position: absolute;
+  left: 8.89%;
+  right: 26.39%;
+  top: 19.78%;
+  bottom: 74.16%;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 56px;
+
+  /* General/White */
+
+  color: #ffffff;
+}
+
+.random-overview {
+  position: absolute;
+  left: 8.89%;
+  right: 8.89%;
+  top: 27.57%;
+  bottom: 65.62%;
+
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+
+  color: #ffffff;
+  overflow: auto;
+  height: 63px;
+  z-index: 1;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  color: transparent;
+}
+
+.random-linear-gradient {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 36.45%;
+  bottom: 42.84%;
+
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(24, 24, 24, 0.546875) 38.26%,
+    #131313 92.82%,
+    #131313 98.68%,
+    #131313 108.61%
+  );
+  z-index: 0;
+}
+
+.random-play-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+
+  position: absolute;
+  left: 8.89%;
+  right: 70.56%;
+  top: 36.97%;
+  bottom: 58.7%;
+
+  border-radius: 3px;
+  background-color: #ffffff;
+  padding: 8px 24px;
+  gap: 8px;
+  letter-spacing: 0.05em;
+
+  /* General/Dark blue */
+
+  color: #171f46;
+  border: 0px;
+  z-index: 1;
+}
+
+.random-loader-container {
+  position: absolute;
+  left: 8.89%;
+  right: 8.89%;
+  top: 11.1%;
+  bottom: 60.43%;
+
+  background: #0d0d0d;
+  border-radius: 4px;
+}
+
+.random-loader {
+  margin-top: 91px;
+  margin-left: 130px;
+}
+
+.random-failure-view {
+  height: 19xp;
+  width: 22px;
+  margin-left: 138px;
+  margin-top: 61px;
+  margin-top: 78px;
+}
+
+.random-failure-container {
+  position: absolute;
+  left: 8.89%;
+  right: 8.89%;
+  top: 11.5%;
+  bottom: 59%;
+
+  background: #0d0d0d;
+  border-radius: 4px;
+}
+.failure-view {
+  margin-top: 15px;
+  margin-left: 41px;
+  height: 16px;
+  width: 215px;
+
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height */
+
+  color: #ffffff;
+  text-align: center;
+}
+.random-failure-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  border: 0px;
+  margin-left: 109px;
+  margin-top: 110px;
+  height: 28px;
+  margin-top: 15px;
+  width: 77px;
+  border-radius: 3px;
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 24px;
+  color: #171f46;
+  cursor: pointer;
+  outline: none;
+}
+
+@media screen and (min-width: 768px) {
+  .random-image {
+    display: none;
+  }
+
+  .random-image-backdrop {
+    display: inline-block;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 55.38%;
+    height: 605px;
+    width: 1440px;
+  }
+
+  .random-heading {
+    position: absolute;
+    left: 11.39%;
+    right: 11.39%;
+    top: 11.8%;
+    bottom: 84.53%;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 62px;
+  }
+
+  .random-overview {
+    position: absolute;
+    left: 11.39%;
+    right: 11.39%;
+    top: 16.89%;
+    bottom: 78.48%;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    height: 78px;
+  }
+
+  .random-linear-gradient {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 26.26%;
+    bottom: 64.14%;
+  }
+
+  .random-play-button {
+    position: absolute;
+    left: 11.46%;
+    right: 83.19%;
+    top: 23.41%;
+    bottom: 73.74%;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .random-loader-container {
+    position: absolute;
+    left: 11.53%;
+    right: 11.46%;
+    top: 6.99%;
+    bottom: 65.55%;
+    border-radius: 8px;
+  }
+
+  .random-loader {
+    margin-top: 212px;
+    margin-left: 534px;
+  }
+
+  .random-failure-view {
+    margin-top: 172px;
+    margin-left: 533px;
+    height: 38px;
+    width: 44px;
+  }
+
+  .random-failure-container {
+    position: absolute;
+    left: 11.53%;
+    right: 11.46%;
+    top: 6.99%;
+    bottom: 65.55%;
+    border-radius: 8px;
+  }
+  .failure-view {
+    margin-top: 22px;
+    margin-left: 429px;
+    height: 18px;
+    width: 251px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .random-failure-button {
+    margin-top: 16px;
+    margin-left: 508px;
+    height: 32px;
+    width: 94px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}

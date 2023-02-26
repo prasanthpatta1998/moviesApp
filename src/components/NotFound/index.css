@@ -1,0 +1,131 @@
+.not-found-container {
+  position: relative;
+  width: 360px;
+  height: 640px;
+  background: #ffffff;
+}
+.not-found-image-sm {
+  position: relative;
+  width: 360px;
+  height: 640px;
+  background: #ffffff;
+}
+
+.not-found-image-lg {
+  display: none;
+}
+
+.not-found-heading {
+  position: absolute;
+  left: 10.28%;
+  right: 10.28%;
+  top: 33.31%;
+  bottom: 56.56%;
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  color: #ffffff;
+}
+
+.not-found-description {
+  position: absolute;
+  left: 8.89%;
+  right: 8.89%;
+  top: 43.94%;
+  bottom: 44.22%;
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  color: #ffffff;
+}
+.not-found-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  justify-content: center;
+  position: absolute;
+  left: 32.5%;
+  right: 32.22%;
+  top: 58.28%;
+  bottom: 35.47%;
+  border-radius: 3px;
+  border: 0px;
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  color: #171f46;
+  cursor: pointer;
+  outline: none;
+}
+
+.not-found-description-lg {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .not-found-container {
+    width: 1440px;
+    height: 1024px;
+  }
+  .not-found-image-sm {
+    display: none;
+  }
+  .not-found-image-lg {
+    display: inline-block;
+    width: 1440px;
+    height: 1024px;
+  }
+  .not-found-heading {
+    font-size: 96px;
+    line-height: 125px;
+    margin-left: 377px;
+    margin-top: 362px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 686px;
+    height: 125px;
+  }
+  .not-found-description {
+    display: none;
+  }
+
+  .not-found-description-lg {
+    display: inline-block;
+    position: absolute;
+    left: 28.82%;
+    right: 28.82%;
+    top: 47.68%;
+    bottom: 43.26%;
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 31px;
+    text-align: center;
+    color: #ffffff;
+    width: 610px;
+    height: 62px;
+  }
+  .not-found-button {
+    margin-left: 657px;
+    margin-top: 613px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 127px;
+    height: 48px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}

@@ -1,0 +1,120 @@
+.top-rated-now-heading {
+  position: absolute;
+  left: 8.89%;
+  right: 71.67%;
+  top: 57.95%;
+  bottom: 39.24%;
+
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  /* identical to box height */
+
+  /* General/White */
+
+  color: #ffffff;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  height: 24px;
+  width: 24px;
+  font-size: 24px;
+  color: #131313;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 200;
+}
+
+.top-rated-slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 32px;
+  padding-right: 32px;
+  margin-top: 32px;
+}
+
+.top-rated-slick-container {
+  max-width: 360px;
+  margin-top: 10px;
+  margin-top: 12px;
+  position: absolute;
+  left: 8.89%;
+  right: 8.89%;
+  top: 61.62%;
+  bottom: 31.46%;
+}
+
+.top-rated-logo-image {
+  margin: 0px 10px;
+  height: 64px;
+  width: 90px;
+  border-radius: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .top-rated-slider {
+    margin-top: 0px;
+  }
+
+  .top-rated-now-heading {
+    position: absolute;
+    left: 11.46%;
+    right: 11.46%;
+    top: 53.59%;
+    bottom: 43.92%;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 31px;
+  }
+  .top-rated-logo-image {
+    height: 170px;
+    width: 250px;
+  }
+
+  .top-rated-slick-container {
+    position: absolute;
+    left: 11.67%;
+    right: 11.67%;
+    top: 57.44%;
+    bottom: 32.48%;
+    max-width: 1000%;
+    margin-top: 24px;
+  }
+}
+
+.top-rated-loader-container {
+  position: absolute;
+  left: 8.89%;
+  right: 8.89%;
+  top: 60.19%;
+  bottom: 26.78%;
+  background: #0d0d0d;
+  border-radius: 4px;
+}
+
+.top-rated-loader {
+  margin-top: 35px;
+  margin-left: 130px;
+}
+
+@media screen and (min-width: 768px) {
+  .top-rated-loader-container {
+    position: absolute;
+    left: 11.53%;
+    right: 11.46%;
+    top: 54.11%;
+    bottom: 34.35%;
+    background: #0d0d0d;
+    border-radius: 8px;
+  }
+  .top-rated-loader {
+    margin-top: 69px;
+    margin-left: 538px;
+  }
+}

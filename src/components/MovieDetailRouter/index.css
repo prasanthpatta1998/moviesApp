@@ -1,0 +1,902 @@
+.movie-detail-container {
+  height: 990px;
+  background-size: cover;
+  background-color: #131313;
+}
+
+.detail-movie-backdrop-container {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 56.87%;
+  height: 427px;
+  background-size: cover;
+}
+
+.detail-movie-image {
+  display: none;
+}
+
+.detail-movie-poster-image {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 56.87%;
+  z-index: 0;
+  width: 360px;
+  height: 427px;
+  background-size: cover;
+  border-radius: 8px;
+}
+
+.specific-movie-name {
+  position: absolute;
+  left: 8.89%;
+  right: 8.89%;
+  top: 16.06%;
+  bottom: 79.19%;
+
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 47px;
+  height: 47px;
+  color: #ffffff;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.runtime {
+  position: absolute;
+  left: 8.89%;
+  right: 75.83%;
+  top: 21.72%;
+  bottom: 76.16%;
+
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+
+  color: #ffffff;
+  z-index: 2;
+}
+
+.movieCertificate {
+  width: 51px;
+  height: 25px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 2px 12px;
+  gap: 10px;
+
+  position: absolute;
+  left: 28.61%;
+  right: 57.22%;
+  top: 21.62%;
+  bottom: 75.86%;
+
+  border: 1px solid #ffffff;
+  border-radius: 2px;
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+
+  color: #ffffff;
+  padding-top: 2px;
+  padding-left: 12px;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  z-index: 2;
+}
+
+.year {
+  position: absolute;
+  left: 47.22%;
+  right: 42.22%;
+  top: 21.72%;
+  bottom: 76.16%;
+
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+
+  color: #ffffff;
+  z-index: 2;
+}
+
+.overview {
+  position: absolute;
+  left: 8.89%;
+  right: 8.89%;
+  top: 25.76%;
+  bottom: 67.88%;
+
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+
+  color: #ffffff;
+  height: 63px;
+  overflow: auto;
+  z-index: 2;
+  overflow: auto;
+}
+.play-specific-movie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+
+  position: absolute;
+  left: 9.03%;
+  right: 69.86%;
+  top: 34.55%;
+  bottom: 62.22%;
+
+  border-radius: 3px;
+  border: 0px;
+  background-color: #ffffff;
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  /* identical to box height, or 114% */
+
+  letter-spacing: 0.05em;
+  font-variant: all-small-caps;
+
+  /* General/Dark blue */
+
+  color: #171f46;
+  z-index: 2;
+}
+
+.linear-gradient {
+  position: absolute;
+  left: 0.56%;
+  right: -0.56%;
+  top: 28.79%;
+  bottom: 54.85%;
+
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(24, 24, 24, 0.546875) 38.26%,
+    #131313 92.82%,
+    #131313 98.68%,
+    #131313 108.61%
+  );
+  z-index: 0;
+}
+
+.linear-gradient-horizontal {
+  position: absolute;
+  left: 0%;
+  right: 14.17%;
+  top: 0%;
+  bottom: 56.87%;
+
+  background: linear-gradient(
+    90.33deg,
+    #181818 -6.5%,
+    rgba(24, 24, 24, 0.6) 57.15%,
+    rgba(24, 24, 24, 0) 99.77%
+  );
+  z-index: 0;
+}
+
+.genres {
+  position: absolute;
+  left: 8.89%;
+  right: 78.61%;
+  top: 41.82%;
+  bottom: 56.36%;
+
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+
+  /* Light / blue-gray / 500 */
+
+  color: #64748b;
+}
+
+.genres-list {
+  position: absolute;
+  left: 8.89%;
+  right: 74.72%;
+  top: 44.04%;
+  bottom: 47.88%;
+
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  /* or 167% */
+
+  /* General/White */
+
+  color: #ffffff;
+  overflow: auto;
+}
+
+.audio-available {
+  position: absolute;
+  left: 32.5%;
+  right: 40.56%;
+  top: 41.82%;
+  bottom: 56.36%;
+
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+
+  /* Light / blue-gray / 500 */
+
+  color: #64748b;
+}
+
+.audio-languages {
+  position: absolute;
+  left: 32.5%;
+  right: 55.56%;
+  top: 44.34%;
+  bottom: 49.6%;
+
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  /* or 167% */
+
+  /* General/White */
+
+  color: #ffffff;
+
+  overflow: auto;
+}
+
+.rating-count {
+  position: absolute;
+  left: 68.33%;
+  right: 8.89%;
+  top: 41.82%;
+  bottom: 56.36%;
+
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+
+  /* Light / blue-gray / 500 */
+
+  color: #64748b;
+}
+
+.vote-count {
+  position: absolute;
+  left: 68.33%;
+  right: 20.83%;
+  top: 44.34%;
+  bottom: 53.64%;
+
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  /* identical to box height, or 167% */
+
+  /* General/White */
+
+  color: #ffffff;
+}
+
+.rating-average {
+  position: absolute;
+  left: 68.33%;
+  right: 5.56%;
+  top: 46.77%;
+  bottom: 51.41%;
+
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+
+  /* Light / blue-gray / 500 */
+
+  color: #64748b;
+}
+
+.vote-average {
+  position: absolute;
+  left: 68.33%;
+  right: 26.67%;
+  top: 49.29%;
+  bottom: 48.69%;
+
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  /* identical to box height, or 167% */
+
+  /* General/White */
+
+  color: #ffffff;
+}
+
+.budget {
+  position: absolute;
+  left: 8.89%;
+  right: 78.89%;
+  top: 53.74%;
+  bottom: 44.44%;
+
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+
+  /* Light / blue-gray / 500 */
+
+  color: #64748b;
+}
+.total-budget {
+  position: absolute;
+  left: 8.89%;
+  right: 70.83%;
+  top: 56.26%;
+  bottom: 41.72%;
+
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  /* identical to box height, or 167% */
+
+  /* General/White */
+
+  color: #ffffff;
+}
+
+.release-date {
+  position: absolute;
+  left: 8.89%;
+  right: 68.33%;
+  top: 58.69%;
+  bottom: 39.49%;
+
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+
+  /* Light / blue-gray / 500 */
+
+  color: #64748b;
+}
+
+.released-movie-date {
+  position: absolute;
+  left: 8.89%;
+  right: 61.5%;
+  top: 61.21%;
+  bottom: 36.77%;
+
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  /* identical to box height, or 167% */
+
+  /* General/White */
+
+  color: #ffffff;
+}
+
+.more-like-this {
+  position: absolute;
+  left: 8.89%;
+  right: 57.5%;
+  top: 65.66%;
+  bottom: 31.72%;
+
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  /* identical to box height */
+
+  /* General/White */
+
+  color: #ffffff;
+}
+
+.similar-movies {
+  position: absolute;
+  left: 8.89%;
+  right: 8.89%;
+  top: 69.9%;
+  bottom: 12.96%;
+  list-style-type: none;
+  padding-left: 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.similar-li-item {
+  width: 90px;
+  height: 64px;
+  margin-bottom: 11px;
+}
+
+.similar-poste-path {
+  height: 64px;
+  width: 90px;
+  border-radius: 8px;
+}
+
+.contact-icons-container-movie {
+}
+
+.google-icon {
+  font-family: 'Font Awesome 5 Brands';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13.7143px;
+  line-height: 16px;
+  text-align: center;
+
+  color: #ffffff;
+
+  /* identical to box height */
+}
+
+.google-icon:hover {
+  transform: scale(1.3);
+}
+
+.google {
+  position: absolute;
+  left: 34.72%;
+  right: 61.39%;
+  top: 90.51%;
+  bottom: 7.88%;
+}
+
+.twitter {
+  position: absolute;
+  left: 43.61%;
+  right: 52.5%;
+  top: 90.51%;
+  bottom: 7.88%;
+}
+
+.instagram {
+  position: absolute;
+  left: 52.5%;
+  right: 43.61%;
+  top: 90.51%;
+  bottom: 7.88%;
+}
+
+.facebook {
+  position: absolute;
+  left: 61.11%;
+  right: 34.44%;
+  top: 90.51%;
+  bottom: 7.88%;
+}
+
+.contact-heading-movie {
+  position: absolute;
+  left: 41.94%;
+  right: 41.39%;
+  top: 93.54%;
+  bottom: 4.85%;
+
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height, or 133% */
+
+  color: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  .movie-detail-container {
+    height: 1351px;
+    width: 1440px;
+  }
+
+  .detail-movie-poster-image {
+    display: none;
+  }
+
+  .detail-movie-image {
+    display: inline-block;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 62.92%;
+    height: 501px;
+    width: 1440px;
+    z-index: 0;
+    border-radius: 8px;
+  }
+
+  .specific-movie-name {
+    margin-top: 183px;
+    margin-left: 165px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 63px;
+    height: 63px;
+  }
+
+  .runtime {
+    margin-top: 260px;
+    margin-left: 167px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  .movieCertificate {
+    margin-top: 260px;
+    margin-left: 245.5px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23px;
+    height: 28px;
+    width: 55px;
+  }
+
+  .year {
+    margin-top: 260px;
+    margin-left: 317px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23px;
+    height: 28px;
+    width: 55px;
+  }
+
+  .linear-gradient {
+    height: 167px;
+    margin-top: 335px;
+    top: 0;
+    right: 0;
+    left: 0;
+    border: 0;
+    width: 1440px;
+  }
+  .linear-gradient-horizontal {
+    width: 701px;
+    height: 501px;
+  }
+
+  .google {
+    margin-top: 1226px;
+    margin-left: 647px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    height: 21px;
+    width: 18px;
+  }
+
+  .overview {
+    margin-top: 309px;
+    margin-left: 164px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23px;
+    height: 78px;
+    width: 1110px;
+  }
+  .play-specific-movie {
+    margin-top: 419px;
+    margin-left: 164px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    height: 40px;
+    width: 74px;
+    border-radius: 3px;
+  }
+  .genres-list {
+    margin-top: 559px;
+    margin-left: 165px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    height: 96px;
+    width: 78px;
+    overflow: hidden;
+  }
+  .genres {
+    margin-top: 525px;
+    margin-left: 165px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+    height: 26px;
+    width: 58px;
+  }
+  .audio-available {
+    margin-top: 525px;
+    margin-left: 450px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+    height: 26px;
+    width: 125px;
+  }
+  .audio-languages {
+    margin-top: 559px;
+    margin-left: 450px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    height: 72px;
+    width: 59px;
+    overflow: hidden;
+  }
+
+  .rating-count {
+    margin-top: 525px;
+    margin-left: 735px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+    height: 26px;
+    width: 106px;
+  }
+  .vote-count {
+    margin-top: 559px;
+    margin-left: 735px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    height: 24px;
+    width: 51px;
+  }
+  .rating-average {
+    margin-top: 595px;
+    margin-left: 735px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    height: 26px;
+    width: 121px;
+    font-size: 16px;
+  }
+
+  .vote-average {
+    margin-top: 629px;
+    margin-left: 735px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    height: 24px;
+    width: 24px;
+    font-size: 14px;
+  }
+  .budget {
+    margin-top: 525px;
+    margin-left: 1025px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    height: 26px;
+    width: 57px;
+    font-size: 16px;
+  }
+  .total-budget {
+    margin-top: 559px;
+    margin-left: 1025px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    height: 24px;
+    width: 98px;
+    font-size: 14px;
+  }
+  .release-date {
+    margin-top: 595px;
+    margin-left: 1025px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    height: 26px;
+    width: 105px;
+    font-size: 16px;
+  }
+  .released-movie-date {
+    margin-top: 629px;
+    margin-left: 1025px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    height: 24px;
+    width: 113px;
+    font-size: 14px;
+  }
+  .more-like-this {
+    margin-top: 703px;
+    margin-left: 165px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    height: 31px;
+    width: 146px;
+  }
+
+  .similar-movies {
+    margin-top: 758px;
+    margin-left: 165px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    height: 370px;
+    width: 1110px;
+    margin-right: 165px;
+    margin-bottom: 221px;
+  }
+  .similar-li-item {
+    width: 255px;
+    height: 170px;
+    margin-bottom: 30px;
+  }
+
+  .similar-poste-path {
+    width: 255px;
+    height: 170px;
+    border-radius: 8px;
+  }
+
+  .contact-heading-movie {
+    margin-top: 1263px;
+    margin-left: 680px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    height: 24px;
+    width: 80px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+  }
+  .twitter {
+    margin-top: 1226px;
+    margin-left: 689px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    height: 21px;
+    width: 18px;
+  }
+  .instagram {
+    margin-top: 1226px;
+    margin-left: 731px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    height: 21px;
+    width: 18px;
+  }
+  .facebook {
+    margin-top: 1226px;
+    margin-left: 771px;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    height: 21px;
+    width: 18px;
+  }
+  .google-icon {
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
