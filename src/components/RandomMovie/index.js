@@ -88,7 +88,7 @@ class RandomMovie extends Component {
     <div className="random-failure-container">
       <img
         src="https://res.cloudinary.com/duezhxznc/image/upload/v1677144753/alert-triangle_ubtgex.png"
-        alt="failure"
+        alt="failure view"
         className="random-failure-view"
       />
       <p className="failure-view">Something went wrong. Please try again</p>

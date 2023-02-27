@@ -143,7 +143,7 @@ class TrendingMovies extends Component {
     <div className="trending-loader-container">
       <img
         src="https://res.cloudinary.com/duezhxznc/image/upload/v1677144753/alert-triangle_ubtgex.png"
-        alt="failure"
+        alt="failure view"
         className="trending-failure-view"
       />
       <p className="trending-failure-view-name">

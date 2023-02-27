@@ -1,7 +1,6 @@
 import {Component} from 'react'
 import {Link} from 'react-router-dom'
 import Loader from 'react-loader-spinner'
-import {HiOutlineSearch} from 'react-icons/hi'
 import {IoIosArrowBack, IoIosArrowForward} from 'react-icons/io'
 import Cookies from 'js-cookie'
 import Header from '../Header'
@@ -99,20 +98,12 @@ class SearchMovieRouter extends Component {
     }
   }
 
-  onChangeSearchInputValue = event => {
-    this.setState({searchInput: event.target.value})
-  }
-
-  onShowResultsOfSearch = () => {
-    this.showSearchResults()
-  }
-
   onRefreshSearchPage = () => {
     this.showSearchResults()
   }
 
   renderSearchLoader = () => (
-    <div className="popular-loader-container" data-testid="loader">
+    <div className="popular-loader-container" testid="loader">
       <Loader
         type="TailSpin"
         color="#D81F26"
@@ -182,7 +173,7 @@ class SearchMovieRouter extends Component {
     <div className="search-loader-container">
       <img
         src="https://res.cloudinary.com/duezhxznc/image/upload/v1677152293/Background-Complete_ojhbus.png"
-        alt="failure"
+        alt="failure view"
         className="search-failure-view"
       />
       <p className="search-failure-view-name">
@@ -214,27 +205,9 @@ class SearchMovieRouter extends Component {
   }
 
   render() {
-    const {searchInput} = this.state
     return (
       <div className="search-background-container">
         <Header boolValue="true" onSearchMovies={this.onSearchMovies} />
-        <div className="search-input-container">
-          <input
-            type="search"
-            value={searchInput}
-            onChange={this.onChangeSearchInputValue}
-            placeholder="Search"
-            className="header-search-input"
-          />
-          <button
-            type="button"
-            className="header-search-button-type"
-            onClick={this.onShowResultsOfSearch}
-            data-testid="searchButton"
-          >
-            <HiOutlineSearch className="search-icon-type" />
-          </button>
-        </div>
         {this.getSearchMovieList()}
       </div>
     )

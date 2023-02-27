@@ -1,7 +1,7 @@
 import {Component} from 'react'
+import {FaGoogle, FaTwitter, FaInstagram, FaYoutube} from 'react-icons/fa'
 import {Link} from 'react-router-dom'
 import Loader from 'react-loader-spinner'
-import {FaGoogle, FaTwitter, FaInstagram, FaYoutube} from 'react-icons/fa'
 import {IoIosArrowBack, IoIosArrowForward} from 'react-icons/io'
 import Cookies from 'js-cookie'
 import Header from '../Header'
@@ -154,7 +154,7 @@ class Popular extends Component {
     <div className="popular-loader-container">
       <img
         src="https://res.cloudinary.com/duezhxznc/image/upload/v1677152293/Background-Complete_ojhbus.png"
-        alt="failure"
+        alt="failure view"
         className="popular-failure-view"
       />
       <p className="popular-failure-view-name">

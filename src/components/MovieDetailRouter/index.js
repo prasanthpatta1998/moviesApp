@@ -127,8 +127,7 @@ class MovieDetailsRouter extends Component {
     return (
       <>
         <img src={posterPath} alt={title} className="detail-movie-image" />
-
-        <p className="specific-movie-name">{title}</p>
+        <h1 className="specific-movie-name">{title}</h1>
         <p className="runtime">{`${hours}h ${minutes}m`}</p>
         <p className="movieCertificate">{`${movieCertificate}`}</p>
         <p className="year">{`${year}`}</p>
@@ -139,19 +138,19 @@ class MovieDetailsRouter extends Component {
         <div className="linear-gradient"> </div>
         <div className="linear-gradient-horizontal"> </div>
         <h1 className="genres">Genres</h1>
-        <div className="genres-list">
+        <ul className="genres-list">
           {genres.map(eachGenre => (
-            <p className="eachGenreName" key={eachGenre.id}>
+            <li className="eachGenreName" key={eachGenre.id}>
               {eachGenre.name}
-            </p>
+            </li>
           ))}
-        </div>
+        </ul>
         <h1 className="audio-available">Audio Available</h1>
-        <div className="audio-languages">
+        <ul className="audio-languages">
           {availableAudios.map(eachAudio => (
-            <p key={eachAudio.id}>{eachAudio.englishName}</p>
+            <li key={eachAudio.id}>{eachAudio.englishName}</li>
           ))}
-        </div>
+        </ul>
         <h1 className="rating-count">Rating Count</h1>
         <p className="vote-count">{voteCount}</p>
         <h1 className="rating-average">Rating Average</h1>

@@ -4,6 +4,16 @@
   background-color: #131313;
 }
 
+.detail-movie-image {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 56.87%;
+  height: 427px;
+  width: 360px;
+}
+
 .detail-movie-backdrop-container {
   position: absolute;
   left: 0%;
@@ -12,10 +22,6 @@
   bottom: 56.87%;
   height: 427px;
   background-size: cover;
-}
-
-.detail-movie-image {
-  display: none;
 }
 
 .detail-movie-poster-image {
@@ -34,7 +40,6 @@
 .specific-movie-name {
   position: absolute;
   left: 8.89%;
-  right: 8.89%;
   top: 16.06%;
   bottom: 79.19%;
 

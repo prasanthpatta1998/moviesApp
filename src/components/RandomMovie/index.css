@@ -5,6 +5,7 @@
   height: 427px;
   width: 360px;
   top: 0%;
+  z-index: -1;
 }
 
 .random-image-backdrop {
@@ -14,7 +15,6 @@
 .random-heading {
   position: absolute;
   left: 8.89%;
-  right: 26.39%;
   top: 19.78%;
   bottom: 74.16%;
 

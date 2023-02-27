@@ -13,29 +13,16 @@
   z-index: 1;
 }
 
-.md-header-container {
+.md-home {
   display: none;
 }
 
-@media screen and (min-width: 768px) {
-  .header-container {
-    display: none;
-  }
-  .md-header-container {
-    display: block;
-    height: 103px;
-    display: flex;
-    justify-content: space-between;
-    background: rgb(19, 19, 19, 0.2);
-    align-items: center;
-    position: absolute;
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
-    z-index: 1;
-    width: 1440px;
-  }
+.md-popular {
+  display: none;
+}
+
+.profile-image {
+  display: none;
 }
 
 .home-movies-heading {
@@ -55,6 +42,8 @@
   justify-content: center;
   align-items: center;
   margin-right: 12px;
+  cursor: pointer;
+  outline: none;
 }
 
 .search-icon {
@@ -71,6 +60,7 @@
   display: flex;
   justify-content: space-between;
   margin-top: 24px;
+  align-items: flex-start;
 }
 
 .hamburger-button {
@@ -123,38 +113,13 @@
   cursor: pointer;
   outline: none;
   padding-left: 0px;
+  margin-right: 5px;
 }
 
 .hamburg-close-image {
   color: #ffffff;
   height: 20px;
   width: 20px;
-}
-
-.md-header-container {
-}
-.md-movies-hamburg-container {
-  display: flex;
-  padding-left: 0px;
-  list-style-type: none;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  margin-top: 32px;
-  margin-left: 165px;
-  align-items: center;
-}
-
-.md-home-movies-heading {
-  height: 39px;
-  width: 135px;
-}
-
-.profile-container {
-  margin-right: 165px;
-  display: flex;
-  margin-top: 28px;
-  align-items: center;
-  margin-bottom: 27px;
 }
 
 .md-hamburg-items {
@@ -170,40 +135,156 @@
   color: #ffffff;
 }
 
-.md-header-search-button {
+@media screen and (min-width: 768px) {
+  .header-container {
+    height: 103px;
+    padding-left: 165px;
+    padding-right: 165px;
+    top: 0%;
+  }
+
+  .movies-hamburg-container {
+    height: 103px;
+    margin-top: 32px;
+  }
+
+  .home-movies-heading {
+    height: 39px;
+    width: 135px;
+  }
+
+  .md-home {
+    display: block;
+    position: absolute;
+    left: 24.17%;
+    right: 72.92%;
+    top: 36.89%;
+    bottom: 37.86%;
+
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+    /* identical to box height, or 162% */
+
+    letter-spacing: -0.355556px;
+
+    color: #ffffff;
+  }
+
+  .md-popular {
+    display: block;
+    position: absolute;
+    left: 28.75%;
+    right: 67.5%;
+    top: 36.89%;
+    bottom: 37.86%;
+
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    /* identical to box height, or 162% */
+
+    letter-spacing: -0.355556px;
+
+    color: #ffffff;
+  }
+
+  .hamburger-button {
+    display: none;
+  }
+
+  .profile-image {
+    display: block;
+    height: 48px;
+    width: 48px;
+  }
+
+  .header-search-button {
+    font-size: 24px;
+  }
+}
+
+.search-input-container {
+  margin-right: 17px;
+  width: 114px;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+}
+
+.header-search-input {
+  width: 84px;
   background-color: transparent;
   border: 0px;
   height: 24px;
-  width: 24px;
-  margin-right: 32px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  color: #babdc2;
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  padding-left: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  outline: none;
+}
+
+.header-search-button-type {
+  width: 30px;
+  background-color: #2c2b2b;
+  border: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
   cursor: pointer;
   outline: none;
 }
 
-.md-search-icon {
-  height: 24px;
-  width: 24px;
+.search-icon-type {
   color: #ffffff;
+  height: 16px;
+  width: 16px;
 }
 
-.profile-image {
-  height: 48px;
-  width: 48px;
+@media screen and (min-width: 768px) {
+  .search-input-container {
+    width: 264px;
+    height: 40px;
+  }
+
+  .header-search-input {
+    height: 38px;
+    width: 212px;
+    padding-left: 16px;
+    padding-top: 8px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .header-search-button-type {
+    width: 52px;
+    height: 38px;
+  }
+
+  .search-icon-type {
+    height: 20px;
+    width: 20px;
+  }
 }
 
-.md-hamburg-items-2 {
-  height: 26px;
-  width: 54px;
-  font-family: 'HK Grotesk';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 26px;
-  letter-spacing: -0.355556px;
-  color: #ffffff;
-  margin-left: 24px;
+.link-decoration {
+  text-decoration: none;
 }
-
 .search-input-container {
   margin-right: 17px;
   width: 114px;
