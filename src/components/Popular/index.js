@@ -1,6 +1,6 @@
 import {Component} from 'react'
-import {FaGoogle, FaTwitter, FaInstagram, FaYoutube} from 'react-icons/fa'
 import {Link} from 'react-router-dom'
+import {FaGoogle, FaTwitter, FaInstagram, FaYoutube} from 'react-icons/fa'
 import Loader from 'react-loader-spinner'
 import {IoIosArrowBack, IoIosArrowForward} from 'react-icons/io'
 import Cookies from 'js-cookie'
@@ -100,24 +100,31 @@ class Popular extends Component {
     }
   }
 
+  renderPopularUlMovies = () => {
+    const {paginationList} = this.state
+    return (
+      <ul className="popular-ul-item">
+        {paginationList.map(eachMovie => {
+          const {id, posterPath, title} = eachMovie
+          return (
+            <Link to={`/movies/${id}`}>
+              <li className="popular-movie-image" key={id}>
+                <img src={posterPath} alt={title} className="popular-image" />
+              </li>
+            </Link>
+          )
+        })}
+      </ul>
+    )
+  }
+
   renderPopularSuccess = () => {
-    const {paginationList, popularMovies, page} = this.state
+    const {popularMovies, page} = this.state
     const totalPages = Math.ceil(popularMovies.length / 16)
 
     return (
       <>
-        <ul className="popular-ul-item">
-          {paginationList.map(eachMovie => {
-            const {id, posterPath, title} = eachMovie
-            return (
-              <Link to={`/movies/${id}`}>
-                <li className="popular-movie-image" key={id}>
-                  <img src={posterPath} alt={title} className="popular-image" />
-                </li>
-              </Link>
-            )
-          })}
-        </ul>
+        {this.renderPopularUlMovies()}
         <div className="pagination-buttons">
           <button
             type="button"

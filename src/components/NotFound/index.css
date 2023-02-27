@@ -29,20 +29,6 @@
   color: #ffffff;
 }
 
-.not-found-description {
-  position: absolute;
-  left: 8.89%;
-  right: 8.89%;
-  top: 43.94%;
-  bottom: 44.22%;
-  font-family: 'HK Grotesk';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 21px;
-  text-align: center;
-  color: #ffffff;
-}
 .not-found-button {
   display: flex;
   flex-direction: column;
@@ -67,7 +53,18 @@
 }
 
 .not-found-description-lg {
-  display: none;
+  position: absolute;
+  left: 8.89%;
+  right: 8.89%;
+  top: 43.94%;
+  bottom: 44.22%;
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  color: #ffffff;
 }
 
 @media screen and (min-width: 768px) {
@@ -75,9 +72,11 @@
     width: 1440px;
     height: 1024px;
   }
+
   .not-found-image-sm {
     display: none;
   }
+
   .not-found-image-lg {
     display: inline-block;
     width: 1440px;
@@ -100,7 +99,6 @@
   }
 
   .not-found-description-lg {
-    display: inline-block;
     position: absolute;
     left: 28.82%;
     right: 28.82%;

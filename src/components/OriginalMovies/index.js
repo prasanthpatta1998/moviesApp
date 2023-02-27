@@ -144,7 +144,6 @@ class OriginalMovies extends Component {
 
   renderOriginalSuccess = () => (
     <div className="original-slider">
-      <h1 className="original-now-heading">Originals</h1>
       <div className="original-slick-container">{this.renderSlider()}</div>
     </div>
   )
@@ -153,7 +152,7 @@ class OriginalMovies extends Component {
     <div className="Original-loader-container">
       <img
         src="https://res.cloudinary.com/duezhxznc/image/upload/v1677144753/alert-triangle_ubtgex.png"
-        alt="failure"
+        alt="failure view"
         className="trending-failure-view"
       />
       <p className="trending-failure-view-name">

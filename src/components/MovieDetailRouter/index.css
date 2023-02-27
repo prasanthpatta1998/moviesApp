@@ -243,6 +243,8 @@
 
   color: #ffffff;
   overflow: auto;
+  list-style-type: none;
+  padding-left: 0px;
 }
 
 .audio-available {
@@ -282,6 +284,8 @@
   color: #ffffff;
 
   overflow: auto;
+  list-style-type: none;
+  padding-left: 0px;
 }
 
 .rating-count {

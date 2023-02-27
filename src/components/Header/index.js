@@ -51,6 +51,7 @@ class Header extends Component {
           type="button"
           className="header-search-button-type"
           onClick={this.onShowResultsOfSearch}
+          testid="searchButton"
         >
           <HiOutlineSearch className="search-icon-type" />
         </button>
@@ -85,12 +86,14 @@ class Header extends Component {
               className="home-movies-heading"
             />
           </Link>
-          <Link to="/" className="link-decoration">
-            <li className="md-home">Home</li>
-          </Link>
-          <Link to="/popular" className="link-decoration">
-            <li className="md-popular">Popular</li>
-          </Link>
+          <ul>
+            <Link to="/" className="link-decoration">
+              <li className="md-home">Home</li>
+            </Link>
+            <Link to="/popular" className="link-decoration">
+              <li className="md-popular">Popular</li>
+            </Link>
+          </ul>
           <div className="search-container">
             {searchFunction === 'true'
               ? this.renderSearchInput()

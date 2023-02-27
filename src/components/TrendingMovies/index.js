@@ -161,7 +161,6 @@ class TrendingMovies extends Component {
 
   renderTrendingSuccess = () => (
     <div className="main-container">
-      <h1 className="trending-now-heading">Trending Now</h1>
       <div className="slick-container">{this.renderSlider()}</div>
     </div>
   )

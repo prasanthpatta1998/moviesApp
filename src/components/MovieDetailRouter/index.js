@@ -139,17 +139,25 @@ class MovieDetailsRouter extends Component {
         <div className="linear-gradient-horizontal"> </div>
         <h1 className="genres">Genres</h1>
         <ul className="genres-list">
-          {genres.map(eachGenre => (
-            <li className="eachGenreName" key={eachGenre.id}>
-              {eachGenre.name}
-            </li>
-          ))}
+          {genres.map(eachGenre => {
+            const {id, name} = eachGenre
+            return (
+              <li className="eachGenreName" key={id}>
+                <p>{name}</p>
+              </li>
+            )
+          })}
         </ul>
         <h1 className="audio-available">Audio Available</h1>
         <ul className="audio-languages">
-          {availableAudios.map(eachAudio => (
-            <li key={eachAudio.id}>{eachAudio.englishName}</li>
-          ))}
+          {availableAudios.map(eachAudio => {
+            const {id, englishName} = eachAudio
+            return (
+              <li key={id}>
+                <p>{englishName}</p>
+              </li>
+            )
+          })}
         </ul>
         <h1 className="rating-count">Rating Count</h1>
         <p className="vote-count">{voteCount}</p>
@@ -158,7 +166,7 @@ class MovieDetailsRouter extends Component {
         <h1 className="budget">Budget</h1>
         <p className="total-budget">{budget}</p>
         <h1 className="release-date">Release Date</h1>
-        <p className="released-movie-date">{releasedDate}</p>
+        <p className="released-movie-date">{releaseDate}</p>
         <h1 className="more-like-this">More like this </h1>
         {this.getSimilarMovies()}
         <div className="contact-icons-container-movie">
@@ -192,7 +200,7 @@ class MovieDetailsRouter extends Component {
     <div className="search-loader-container">
       <img
         src="https://res.cloudinary.com/duezhxznc/image/upload/v1677152293/Background-Complete_ojhbus.png"
-        alt="failure"
+        alt="failure view"
         className="search-failure-view"
       />
       <p className="search-failure-view-name">
