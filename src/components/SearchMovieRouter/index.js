@@ -99,12 +99,20 @@ class SearchMovieRouter extends Component {
     }
   }
 
+  onChangeSearchInputValue = event => {
+    this.setState({searchInput: event.target.value})
+  }
+
+  onShowResultsOfSearch = () => {
+    this.showSearchResults()
+  }
+
   onRefreshSearchPage = () => {
     this.showSearchResults()
   }
 
   renderSearchLoader = () => (
-    <div className="popular-loader-container" testid="loader">
+    <div className="popular-loader-container" data-testid="loader">
       <Loader
         type="TailSpin"
         color="#D81F26"
@@ -206,9 +214,27 @@ class SearchMovieRouter extends Component {
   }
 
   render() {
+    const {searchInput} = this.state
     return (
       <div className="search-background-container">
         <Header boolValue="true" onSearchMovies={this.onSearchMovies} />
+        <div className="search-input-container">
+          <input
+            type="search"
+            value={searchInput}
+            onChange={this.onChangeSearchInputValue}
+            placeholder="Search"
+            className="header-search-input"
+          />
+          <button
+            type="button"
+            className="header-search-button-type"
+            onClick={this.onShowResultsOfSearch}
+            data-testid="searchButton"
+          >
+            <HiOutlineSearch className="search-icon-type" />
+          </button>
+        </div>
         {this.getSearchMovieList()}
       </div>
     )
