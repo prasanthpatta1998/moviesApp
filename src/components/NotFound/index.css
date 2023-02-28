@@ -1,13 +1,13 @@
 .not-found-container {
   position: relative;
   width: 360px;
-  height: 640px;
+  height: 700px;
   background: #ffffff;
 }
 .not-found-image-sm {
   position: relative;
   width: 360px;
-  height: 640px;
+  height: 700px;
   background: #ffffff;
 }
 
@@ -17,16 +17,15 @@
 
 .not-found-heading {
   position: absolute;
-  left: 10.28%;
-  right: 10.28%;
   top: 33.31%;
+  width: 360px;
   bottom: 56.56%;
   font-family: 'HK Grotesk';
   font-style: normal;
   font-weight: 700;
-  font-size: 40px;
-  line-height: 52px;
+  font-size: 38px;
   color: #ffffff;
+  text-align: center;
 }
 
 .not-found-button {
@@ -61,7 +60,7 @@
   font-family: 'HK Grotesk';
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 21px;
   text-align: center;
   color: #ffffff;

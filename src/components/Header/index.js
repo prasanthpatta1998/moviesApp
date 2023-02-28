@@ -76,6 +76,7 @@ class Header extends Component {
 
   render() {
     const {smHamburger, searchFunction} = this.state
+
     const {match} = this.props
     const {path} = match
     let homeRoute
@@ -103,6 +104,8 @@ class Header extends Component {
         accountRoute = 'unClicked'
         break
     }
+
+    const navHamburger = path === '/account' && '#131313'
 
     return (
       <nav className="header-container">
@@ -147,7 +150,10 @@ class Header extends Component {
           </div>
         </div>
         {smHamburger && (
-          <ul className="sm-tabs-container">
+          <ul
+            className="sm-tabs-container"
+            style={{background: `${navHamburger}`}}
+          >
             <Link to="/" className="link-decoration">
               <li className={`hamburg-items ${homeRoute}`}>Home</li>
             </Link>

@@ -83,7 +83,7 @@
   justify-content: space-between;
   align-items: center;
   background: rgb(19, 19, 19, 0.2);
-  padding: 2px 9px;
+  padding: 4px 9px;
   margin-top: 19px;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
@@ -91,11 +91,11 @@
 .hamburg-items {
   font-family: 'HK Grotesk';
   font-style: normal;
-  font-weight: 600;
+
   font-size: 16px;
   line-height: 26px;
   letter-spacing: -0.355556px;
-  color: #e50914;
+  color: #ffffff;
   height: 26px;
 }
 
@@ -121,10 +121,9 @@
 }
 
 .hamburg-close-image {
-  color: #e50914;
+  color: #ffffff;
   height: 20px;
   width: 20px;
-  opacity: 0.8;
 }
 
 .md-hamburg-items {
@@ -369,7 +368,9 @@
 }
 
 .clicked {
+  text-decoration: underline;
   font-weight: 700;
+  text-decoration-color: #87fafa;
 }
 .unClicked {
   font-weight: 400;

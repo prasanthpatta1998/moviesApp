@@ -17,7 +17,7 @@ const AccountRouter = props => {
 
   return (
     <div className="account-details-container">
-      <Header boolValue="false" />
+      <Header boolValue="false" ulBackground="true" />
 
       <div className="account-header-background"> </div>
       <h1 className="account-heading">Account</h1>
