@@ -73,7 +73,7 @@
 .popular-contact-heading {
   position: absolute;
   left: 41.94%;
-  right: 41.39%;
+  right: 8.89%;
   top: 91.24%;
   bottom: 6.57%;
 
@@ -85,7 +85,6 @@
   /* identical to box height, or 133% */
 
   color: #ffffff;
-  text-align: center;
 }
 
 .popular-loader {

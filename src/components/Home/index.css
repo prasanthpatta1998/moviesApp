@@ -177,7 +177,7 @@
 .home-contact-heading {
   position: absolute;
   left: 41.94%;
-  right: 41.39%;
+  right: 8.89%;
   top: 93.54%;
   bottom: 4.85%;
 
@@ -189,7 +189,6 @@
   /* identical to box height, or 133% */
 
   color: #ffffff;
-  text-align: center;
 }
 
 @media screen and (min-width: 768px) {

@@ -13,7 +13,7 @@
 }
 
 .random-heading {
-  font-family: 'Roboto';
+  font-family: 'HK Grotesk';
   font-style: normal;
   font-weight: 500;
   font-size: 48px;
@@ -196,6 +196,7 @@
     font-weight: 600;
     font-size: 64px;
     line-height: 62px;
+    overflow: visible;
   }
 
   .random-overview {

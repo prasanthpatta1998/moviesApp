@@ -8,6 +8,8 @@ const AccountRouter = props => {
   const onLogoutTheUser = () => {
     const {history} = props
     Cookies.remove('jwt_token')
+    localStorage.removeItem('username')
+    localStorage.removeItem('password')
     history.replace('/login')
   }
 

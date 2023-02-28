@@ -102,6 +102,7 @@ class MovieDetailsRouter extends Component {
       genres,
       overview,
       posterPath,
+      backdropPath,
       releaseDate,
       runtime,
       spokenLanguages,
@@ -126,7 +127,12 @@ class MovieDetailsRouter extends Component {
 
     return (
       <>
-        <img src={posterPath} alt={title} className="detail-movie-image" />
+        <img src={backdropPath} alt={title} className="detail-movie-image" />
+        <img
+          src={posterPath}
+          alt={title}
+          className="detail-movie-poster-image"
+        />
         <h1 className="specific-movie-name">{title}</h1>
         <p className="runtime">{`${hours}h ${minutes}m`}</p>
         <p className="movieCertificate">{`${movieCertificate}`}</p>
@@ -162,7 +168,7 @@ class MovieDetailsRouter extends Component {
         <h1 className="budget">Budget</h1>
         <p className="total-budget">{budget}</p>
         <h1 className="release-date">Release Date</h1>
-        <p className="released-movie-date">{releaseDate}</p>
+        <p className="released-movie-date">{releasedDate}</p>
         <h1 className="more-like-this">More like this </h1>
         {this.getSimilarMovies()}
         <div className="contact-icons-container-movie">
