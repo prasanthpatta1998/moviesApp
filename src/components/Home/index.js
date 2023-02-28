@@ -10,10 +10,8 @@ const Home = () => (
   <div className="home-container">
     <Header boolValue="false" />
     <RandomMovie />
-    <h1 className="trending-now-heading">Trending Now</h1>
     <TrendingMovies />
     <TopRatedMovies />
-    <h1 className="original-now-heading">Originals</h1>
     <OriginalMovies />
 
     <div className="contact-icons-container">

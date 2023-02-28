@@ -163,7 +163,7 @@
 
     font-family: 'HK Grotesk';
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 16px;
     line-height: 26px;
     /* identical to box height, or 162% */
@@ -361,4 +361,11 @@
 
 .link-decoration {
   text-decoration: none;
+}
+
+.clicked {
+  font-weight: 700;
+}
+.unClicked {
+  font-weight: 400;
 }

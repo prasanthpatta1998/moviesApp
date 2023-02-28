@@ -144,6 +144,7 @@ class OriginalMovies extends Component {
 
   renderOriginalSuccess = () => (
     <div className="original-slider">
+      <h1 className="original-now-heading">Originals</h1>
       <div className="original-slick-container">{this.renderSlider()}</div>
     </div>
   )

@@ -13,27 +13,25 @@
 }
 
 .random-heading {
-  position: absolute;
-  left: 8.89%;
-  top: 19.78%;
-  bottom: 74.16%;
-
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
   font-size: 48px;
   line-height: 56px;
-
-  /* General/White */
-
   color: #ffffff;
+  position: absolute;
+  left: 8.89%;
+  right: 8.89%;
+  top: 17.58%;
+  bottom: 68.41%;
+  overflow: auto;
 }
 
 .random-overview {
   position: absolute;
   left: 8.89%;
   right: 8.89%;
-  top: 27.57%;
+  top: 26.57%;
   bottom: 65.62%;
 
   font-family: 'HK Grotesk';

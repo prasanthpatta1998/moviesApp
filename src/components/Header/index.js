@@ -76,6 +76,29 @@ class Header extends Component {
 
   render() {
     const {smHamburger, searchFunction} = this.state
+    const {match} = this.props
+    const {path} = match
+    let homeRoute
+    let popularRoute
+    let accountRoute
+    switch (path) {
+      case '/':
+        homeRoute = 'clicked'
+        popularRoute = 'unClicked'
+        accountRoute = 'unClicked'
+        break
+      case '/popular':
+        homeRoute = 'unClicked'
+        popularRoute = 'clicked'
+        accountRoute = 'unClicked'
+        break
+      default:
+        homeRoute = 'unClicked'
+        popularRoute = 'unClicked'
+        accountRoute = 'clicked'
+        break
+    }
+
     return (
       <nav className="header-container">
         <div className="movies-hamburg-container">
@@ -88,10 +111,10 @@ class Header extends Component {
           </Link>
           <ul>
             <Link to="/" className="link-decoration">
-              <li className="md-home">Home</li>
+              <li className={`md-home ${homeRoute}`}>Home</li>
             </Link>
             <Link to="/popular" className="link-decoration">
-              <li className="md-popular">Popular</li>
+              <li className={`md-popular ${popularRoute}`}>Popular</li>
             </Link>
           </ul>
           <div className="search-container">
@@ -121,13 +144,13 @@ class Header extends Component {
         {smHamburger && (
           <ul className="sm-tabs-container">
             <Link to="/" className="link-decoration">
-              <li className="hamburg-items">Home</li>
+              <li className={`hamburg-items ${homeRoute}`}>Home</li>
             </Link>
             <Link to="/popular" className="link-decoration">
-              <li className="hamburg-items">Popular</li>
+              <li className={`hamburg-items ${popularRoute}`}>Popular</li>
             </Link>
             <Link to="/account" className="link-decoration">
-              <li className="hamburg-items">Account</li>
+              <li className={`hamburg-items ${accountRoute}`}>Account</li>
             </Link>
             <li className="hamburg-items-1">
               <button
