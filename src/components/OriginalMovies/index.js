@@ -109,13 +109,13 @@ class OriginalMovies extends Component {
     return (
       <Slider {...settings}>
         {originalList.map(eachLogo => {
-          const {id, posterPath, title} = eachLogo
+          const {id, backdropPath, title} = eachLogo
           return (
             <Link to={`/movies/${id}`}>
               <div className="original-slick-item" key={id}>
                 <img
                   className="original-logo-image"
-                  src={posterPath}
+                  src={backdropPath}
                   alt={title}
                 />
               </div>

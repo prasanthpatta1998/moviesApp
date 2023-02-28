@@ -1,7 +1,8 @@
 .movie-detail-container {
-  height: 990px;
+  min-height: 990px;
   background-size: cover;
   background-color: #131313;
+  position: relative;
 }
 
 .detail-movie-image {
@@ -210,7 +211,7 @@
 .genres {
   position: absolute;
   left: 8.89%;
-  right: 78.61%;
+  right: 8.89%;
   top: 41.82%;
   bottom: 56.36%;
 
@@ -228,7 +229,7 @@
 .genres-list {
   position: absolute;
   left: 8.89%;
-  right: 74.72%;
+  right: 8.89%;
   top: 44.04%;
   bottom: 47.88%;
 
@@ -245,12 +246,13 @@
   overflow: auto;
   list-style-type: none;
   padding-left: 0px;
+  overflow: auto;
 }
 
 .audio-available {
   position: absolute;
   left: 32.5%;
-  right: 40.56%;
+  right: 8.89%;
   top: 41.82%;
   bottom: 56.36%;
 
@@ -268,7 +270,7 @@
 .audio-languages {
   position: absolute;
   left: 32.5%;
-  right: 55.56%;
+  right: 8.89%;
   top: 44.34%;
   bottom: 49.6%;
 
@@ -309,7 +311,7 @@
 .vote-count {
   position: absolute;
   left: 68.33%;
-  right: 20.83%;
+  right: 8.89%;
   top: 44.34%;
   bottom: 53.64%;
 

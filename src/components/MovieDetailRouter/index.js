@@ -77,12 +77,12 @@ class MovieDetailsRouter extends Component {
     return (
       <ul className="similar-movies">
         {similarMoviesList.map(eachMovie => {
-          const {id, posterPath, title} = eachMovie
+          const {id, backdropPath, title} = eachMovie
           return (
             <Link to={`/movies/${id}`}>
               <li className="similar-li-item" key={eachMovie.id}>
                 <img
-                  src={posterPath}
+                  src={backdropPath}
                   alt={title}
                   className="similar-poste-path"
                 />
@@ -143,7 +143,7 @@ class MovieDetailsRouter extends Component {
             const {id, name} = eachGenre
             return (
               <li className="eachGenreName" key={id}>
-                <p>{name}</p>
+                {name}
               </li>
             )
           })}
@@ -152,11 +152,7 @@ class MovieDetailsRouter extends Component {
         <ul className="audio-languages">
           {availableAudios.map(eachAudio => {
             const {id, englishName} = eachAudio
-            return (
-              <li key={id}>
-                <p>{englishName}</p>
-              </li>
-            )
+            return <li key={id}>{englishName}</li>
           })}
         </ul>
         <h1 className="rating-count">Rating Count</h1>

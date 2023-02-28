@@ -138,11 +138,15 @@ class SearchMovieRouter extends Component {
       <>
         <ul className="search-ul-item">
           {searchPaginationList.map(eachMovie => {
-            const {id, posterPath, title} = eachMovie
+            const {id, backdropPath, title} = eachMovie
             return (
               <Link to={`/movies/${id}`}>
                 <li className="search-movie-image" key={id}>
-                  <img src={posterPath} alt={title} className="search-image" />
+                  <img
+                    src={backdropPath}
+                    alt={title}
+                    className="search-image"
+                  />
                 </li>
               </Link>
             )

@@ -92,10 +92,15 @@ class Header extends Component {
         popularRoute = 'clicked'
         accountRoute = 'unClicked'
         break
-      default:
+      case '/account':
         homeRoute = 'unClicked'
         popularRoute = 'unClicked'
         accountRoute = 'clicked'
+        break
+      default:
+        homeRoute = 'unClicked'
+        popularRoute = 'unClicked'
+        accountRoute = 'unClicked'
         break
     }
 

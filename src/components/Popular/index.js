@@ -105,11 +105,11 @@ class Popular extends Component {
     return (
       <ul className="popular-ul-item">
         {paginationList.map(eachMovie => {
-          const {id, posterPath, title} = eachMovie
+          const {id, backdropPath, title} = eachMovie
           return (
             <Link to={`/movies/${id}`}>
               <li className="popular-movie-image" key={id}>
-                <img src={posterPath} alt={title} className="popular-image" />
+                <img src={backdropPath} alt={title} className="popular-image" />
               </li>
             </Link>
           )

@@ -110,11 +110,11 @@ class TrendingMovies extends Component {
     return (
       <Slider {...settings}>
         {trendingList.map(eachLogo => {
-          const {id, posterPath, title} = eachLogo
+          const {id, backdropPath, title} = eachLogo
           return (
             <Link to={`/movies/${id}`}>
               <div className="slick-item" key={id}>
-                <img className="logo-image" src={posterPath} alt={title} />
+                <img className="logo-image" src={backdropPath} alt={title} />
               </div>
             </Link>
           )
