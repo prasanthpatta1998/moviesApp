@@ -26,21 +26,24 @@ class LoginPage extends Component {
   }
 
   loginTheUser = async event => {
-    const {username, password} = this.state
-    console.log(username)
-    event.preventDefault()
-    const url = 'https://apis.ccbp.in/login'
-    const userDetails = {username, password}
-    const options = {
-      method: 'POST',
-      body: JSON.stringify(userDetails),
-    }
-    const response = await fetch(url, options)
-    const data = await response.json()
-    if (response.ok === true) {
-      this.getLoginTheUser(data.jwt_token)
-    } else {
-      this.getDisplayErrorMsg(data.error_msg)
+    try {
+      const {username, password} = this.state
+      event.preventDefault()
+      const url = 'https://apis.ccbp.in/login'
+      const userDetails = {username, password}
+      const options = {
+        method: 'POST',
+        body: JSON.stringify(userDetails),
+      }
+      const response = await fetch(url, options)
+      const data = await response.json()
+      if (response.ok === true) {
+        this.getLoginTheUser(data.jwt_token)
+      } else {
+        this.getDisplayErrorMsg(data.error_msg)
+      }
+    } catch (error) {
+      console.log(error)
     }
   }
 

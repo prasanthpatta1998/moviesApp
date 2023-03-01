@@ -22,30 +22,34 @@ class RandomMovie extends Component {
 
   getRandomMovie = async () => {
     this.setState({movieStatus: movieApiStatus.inProgress})
-    const url = 'https://apis.ccbp.in/movies-app/originals'
-    const jwtToken = Cookies.get('jwt_token')
-    const options = {
-      headers: {
-        Authorization: `Bearer ${jwtToken}`,
-      },
-      method: 'GET',
-    }
-    const response = await fetch(url, options)
-    const data = await response.json()
-    if (response.ok === true) {
-      const newList = data.results.map(eachMovie => ({
-        id: eachMovie.id,
-        backdropPath: eachMovie.backdrop_path,
-        overview: eachMovie.overview,
-        posterPath: eachMovie.poster_path,
-        title: eachMovie.title,
-      }))
-      newList.sort(() => Math.random() - 0.5)
-      this.setState({
-        randomMovie: newList[0],
-        movieStatus: movieApiStatus.success,
-      })
-    } else {
+    try {
+      const url = 'https://apis.ccbp.in/movies-app/originals'
+      const jwtToken = Cookies.get('jwt_token')
+      const options = {
+        headers: {
+          Authorization: `Bearer ${jwtToken}`,
+        },
+        method: 'GET',
+      }
+      const response = await fetch(url, options)
+      const data = await response.json()
+      if (response.ok === true) {
+        const newList = data.results.map(eachMovie => ({
+          id: eachMovie.id,
+          backdropPath: eachMovie.backdrop_path,
+          overview: eachMovie.overview,
+          posterPath: eachMovie.poster_path,
+          title: eachMovie.title,
+        }))
+        newList.sort(() => Math.random() - 0.5)
+        this.setState({
+          randomMovie: newList[0],
+          movieStatus: movieApiStatus.success,
+        })
+      } else {
+        this.setState({movieStatus: movieApiStatus.failure})
+      }
+    } catch (error) {
       this.setState({movieStatus: movieApiStatus.failure})
     }
   }

@@ -78,29 +78,33 @@ class TrendingMovies extends Component {
 
   getTrendingMovies = async () => {
     this.setState({movieTrendingStatus: movieApiTrendingStatus.inProgress})
-    const url = 'https://apis.ccbp.in/movies-app/trending-movies'
-    const jwtToken = Cookies.get('jwt_token')
-    const options = {
-      headers: {
-        Authorization: `Bearer ${jwtToken}`,
-      },
-      method: 'GET',
-    }
-    const response = await fetch(url, options)
-    const data = await response.json()
-    if (response.ok === true) {
-      const newList = data.results.map(eachMovie => ({
-        id: eachMovie.id,
-        backdropPath: eachMovie.backdrop_path,
-        overview: eachMovie.overview,
-        posterPath: eachMovie.poster_path,
-        title: eachMovie.title,
-      }))
-      this.setState({
-        trendingList: newList,
-        movieTrendingStatus: movieApiTrendingStatus.success,
-      })
-    } else {
+    try {
+      const url = 'https://apis.ccbp.in/movies-app/trending-movies'
+      const jwtToken = Cookies.get('jwt_token')
+      const options = {
+        headers: {
+          Authorization: `Bearer ${jwtToken}`,
+        },
+        method: 'GET',
+      }
+      const response = await fetch(url, options)
+      const data = await response.json()
+      if (response.ok === true) {
+        const newList = data.results.map(eachMovie => ({
+          id: eachMovie.id,
+          backdropPath: eachMovie.backdrop_path,
+          overview: eachMovie.overview,
+          posterPath: eachMovie.poster_path,
+          title: eachMovie.title,
+        }))
+        this.setState({
+          trendingList: newList,
+          movieTrendingStatus: movieApiTrendingStatus.success,
+        })
+      } else {
+        this.setState({movieTrendingStatus: movieApiTrendingStatus.failure})
+      }
+    } catch (error) {
       this.setState({movieTrendingStatus: movieApiTrendingStatus.failure})
     }
   }

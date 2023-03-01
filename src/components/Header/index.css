@@ -17,6 +17,13 @@
   display: none;
 }
 
+.md-home:hover {
+  transform: scale(1.1);
+}
+
+.md-popular:hover {
+  transform: scale(1.1);
+}
 .md-popular {
   display: none;
 }
@@ -97,6 +104,10 @@
   letter-spacing: -0.355556px;
   color: #ffffff;
   height: 26px;
+}
+
+.hamburg-items:hover{
+    transform: scale(1.1);
 }
 
 .hamburg-items-1 {

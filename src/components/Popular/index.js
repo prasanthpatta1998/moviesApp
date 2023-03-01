@@ -28,30 +28,34 @@ class Popular extends Component {
 
   getPopularMovies = async () => {
     this.setState({popularMovieStatus: movieApiPopularStatus.inProgress})
-    const url = 'https://apis.ccbp.in/movies-app/popular-movies'
-    const jwtToken = Cookies.get('jwt_token')
-    const options = {
-      headers: {
-        Authorization: `Bearer ${jwtToken}`,
-      },
-      method: 'GET',
-    }
-    const response = await fetch(url, options)
-    const data = await response.json()
-    if (response.ok === true) {
-      const newList = data.results.map(eachMovie => ({
-        id: eachMovie.id,
-        backdropPath: eachMovie.backdrop_path,
-        overview: eachMovie.overview,
-        posterPath: eachMovie.poster_path,
-        title: eachMovie.title,
-      }))
-      this.setState({
-        popularMovies: newList,
-        paginationList: newList.slice(0, 16),
-        popularMovieStatus: movieApiPopularStatus.success,
-      })
-    } else {
+    try {
+      const url = 'https://apis.ccbp.in/movies-app/popular-movies'
+      const jwtToken = Cookies.get('jwt_token')
+      const options = {
+        headers: {
+          Authorization: `Bearer ${jwtToken}`,
+        },
+        method: 'GET',
+      }
+      const response = await fetch(url, options)
+      const data = await response.json()
+      if (response.ok === true) {
+        const newList = data.results.map(eachMovie => ({
+          id: eachMovie.id,
+          backdropPath: eachMovie.backdrop_path,
+          overview: eachMovie.overview,
+          posterPath: eachMovie.poster_path,
+          title: eachMovie.title,
+        }))
+        this.setState({
+          popularMovies: newList,
+          paginationList: newList.slice(0, 16),
+          popularMovieStatus: movieApiPopularStatus.success,
+        })
+      } else {
+        this.setState({popularMovieStatus: movieApiPopularStatus.failure})
+      }
+    } catch (error) {
       this.setState({popularMovieStatus: movieApiPopularStatus.failure})
     }
   }

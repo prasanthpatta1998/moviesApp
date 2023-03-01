@@ -26,39 +26,43 @@ class MovieDetailsRouter extends Component {
 
   getMovieDetails = async () => {
     this.setState({movieStatus: movieApiStatus.inProgress})
-    const {match} = this.props
-    const {params} = match
-    const {id} = params
-    const url = `https://apis.ccbp.in/movies-app/movies/${id}`
-    const jwtToken = Cookies.get('jwt_token')
-    const options = {
-      headers: {
-        Authorization: `Bearer ${jwtToken}`,
-      },
-      method: 'GET',
-    }
-    const response = await fetch(url, options)
-    const data = await response.json()
-    if (response.ok === true) {
-      const newData = {
-        adult: data.movie_details.adult,
-        backdropPath: data.movie_details.backdrop_path,
-        budget: data.movie_details.budget,
-        genres: data.movie_details.genres,
-        id: data.movie_details.id,
-        overview: data.movie_details.overview,
-        posterPath: data.movie_details.poster_path,
-        releaseDate: data.movie_details.release_date,
-        runtime: data.movie_details.runtime,
-        similarMovies: data.movie_details.similar_movies,
-        spokenLanguages: data.movie_details,
-        title: data.movie_details.title,
-        voteAverage: data.movie_details.vote_average,
-        voteCount: data.movie_details.vote_count,
+    try {
+      const {match} = this.props
+      const {params} = match
+      const {id} = params
+      const url = `https://apis.ccbp.in/movies-app/movies/${id}`
+      const jwtToken = Cookies.get('jwt_token')
+      const options = {
+        headers: {
+          Authorization: `Bearer ${jwtToken}`,
+        },
+        method: 'GET',
       }
-      console.log(newData)
-      this.setState({movieData: newData, movieStatus: movieApiStatus.success})
-    } else {
+      const response = await fetch(url, options)
+      const data = await response.json()
+      if (response.ok === true) {
+        const newData = {
+          adult: data.movie_details.adult,
+          backdropPath: data.movie_details.backdrop_path,
+          budget: data.movie_details.budget,
+          genres: data.movie_details.genres,
+          id: data.movie_details.id,
+          overview: data.movie_details.overview,
+          posterPath: data.movie_details.poster_path,
+          releaseDate: data.movie_details.release_date,
+          runtime: data.movie_details.runtime,
+          similarMovies: data.movie_details.similar_movies,
+          spokenLanguages: data.movie_details,
+          title: data.movie_details.title,
+          voteAverage: data.movie_details.vote_average,
+          voteCount: data.movie_details.vote_count,
+        }
+        console.log(newData)
+        this.setState({movieData: newData, movieStatus: movieApiStatus.success})
+      } else {
+        this.setState({movieStatus: movieApiStatus.failure})
+      }
+    } catch (error) {
       this.setState({movieStatus: movieApiStatus.failure})
     }
   }

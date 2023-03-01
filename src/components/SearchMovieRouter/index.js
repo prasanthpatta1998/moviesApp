@@ -24,32 +24,36 @@ class SearchMovieRouter extends Component {
 
   showSearchResults = async () => {
     this.setState({searchState: movieApiSearchStatus.inProgress})
-    const {searchInput} = this.state
-    const url = `https://apis.ccbp.in/movies-app/movies-search?search=${searchInput}`
-    const jwtToken = Cookies.get('jwt_token')
-    const options = {
-      headers: {
-        Authorization: `Bearer ${jwtToken}`,
-      },
-      method: 'GET',
-    }
-    const response = await fetch(url, options)
-    const data = await response.json()
-    console.log(data)
-    if (response.ok === true) {
-      const newList = data.results.map(eachMovie => ({
-        id: eachMovie.id,
-        backdropPath: eachMovie.backdrop_path,
-        overview: eachMovie.overview,
-        posterPath: eachMovie.poster_path,
-        title: eachMovie.title,
-      }))
-      this.setState({
-        searchResults: newList,
-        searchState: movieApiSearchStatus.success,
-        searchPaginationList: newList.slice(0, 16),
-      })
-    } else {
+    try {
+      const {searchInput} = this.state
+      const url = `https://apis.ccbp.in/movies-app/movies-search?search=${searchInput}`
+      const jwtToken = Cookies.get('jwt_token')
+      const options = {
+        headers: {
+          Authorization: `Bearer ${jwtToken}`,
+        },
+        method: 'GET',
+      }
+      const response = await fetch(url, options)
+      const data = await response.json()
+      console.log(data)
+      if (response.ok === true) {
+        const newList = data.results.map(eachMovie => ({
+          id: eachMovie.id,
+          backdropPath: eachMovie.backdrop_path,
+          overview: eachMovie.overview,
+          posterPath: eachMovie.poster_path,
+          title: eachMovie.title,
+        }))
+        this.setState({
+          searchResults: newList,
+          searchState: movieApiSearchStatus.success,
+          searchPaginationList: newList.slice(0, 16),
+        })
+      } else {
+        this.setState({searchState: movieApiSearchStatus.failure})
+      }
+    } catch (error) {
       this.setState({searchState: movieApiSearchStatus.failure})
     }
   }
