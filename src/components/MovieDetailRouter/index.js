@@ -203,18 +203,18 @@ class MovieDetailsRouter extends Component {
   }
 
   renderMovieFailure = () => (
-    <div className="search-loader-container">
+    <div className="detail-loader-container">
       <img
         src="https://res.cloudinary.com/duezhxznc/image/upload/v1677152293/Background-Complete_ojhbus.png"
         alt="failure view"
-        className="search-failure-view"
+        className="detail-failure-view"
       />
-      <p className="search-failure-view-name">
+      <p className="detail-failure-view-name">
         Something went wrong. Please try again
       </p>
       <button
         type="button"
-        className="search-failure-button"
+        className="detail-failure-button"
         onClick={this.onRefreshMoviePage}
       >
         Try Again

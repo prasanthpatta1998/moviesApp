@@ -72,28 +72,32 @@ class LoginPage extends Component {
 
         <form className="login-form" onSubmit={this.loginTheUser}>
           <h1 className="form-heading">Login</h1>
-          <label htmlFor="username" className="username-label">
-            USERNAME
-          </label>
-          <input
-            id="username"
-            type="text"
-            placeholder="Username"
-            className="username-input"
-            onChange={this.userInput}
-            value={username}
-          />
-          <label htmlFor="password" className="password-label">
-            PASSWORD
-          </label>
-          <input
-            id="password"
-            type="password"
-            placeholder="Password"
-            className="password-input"
-            onChange={this.userPassword}
-            value={password}
-          />
+          <div className="username-container">
+            <label htmlFor="username" className="username-label">
+              USERNAME
+            </label>
+            <input
+              id="username"
+              type="text"
+              placeholder="Username"
+              className="username-input"
+              onChange={this.userInput}
+              value={username}
+            />
+          </div>
+          <div className="password-container">
+            <label htmlFor="password" className="password-label">
+              PASSWORD
+            </label>
+            <input
+              id="password"
+              type="password"
+              placeholder="Password"
+              className="password-input"
+              onChange={this.userPassword}
+              value={password}
+            />
+          </div>
           {fetchingData && <p className="error-msg">{errorMsg}</p>}
           <div className="form-button-container">
             <button type="submit" className="form-button">

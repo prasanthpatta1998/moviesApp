@@ -129,15 +129,15 @@
 
 .trending-failure-view-name {
   height: 15px;
-  width: 179px;
   margin-top: 6px;
-  margin-left: 59px;
   font-family: 'HK Grotesk';
   font-style: normal;
   font-weight: 500;
   font-size: 10px;
   line-height: 13px;
   color: #ffffff;
+  text-align: center;
+  width: 296px;
 }
 
 .trending-failure-button {

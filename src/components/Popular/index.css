@@ -97,7 +97,7 @@
   position: absolute;
   left: 17.78%;
   right: 17.5%;
-  top: 27.81%;
+  top: 28.81%;
   bottom: 45.31%;
   height: 172px;
   width: 233px;
@@ -150,6 +150,7 @@
   color: #171f46;
   cursor: pointer;
   outline: none;
+  height: 40px;
 }
 
 @media screen and (min-width: 768px) {

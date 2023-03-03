@@ -912,3 +912,105 @@
     line-height: 21px;
   }
 }
+
+.detail-failure-view {
+  position: absolute;
+  left: 17.78%;
+  right: 17.5%;
+  top: 35.81%;
+  bottom: 45.31%;
+  height: 172px;
+  width: 233px;
+}
+
+.detail-failure-view-name {
+  position: absolute;
+  left: 8.89%;
+  right: 8.89%;
+  top: 55.44%;
+  bottom: 37.81%;
+
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.detail-failure-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+
+  position: absolute;
+  left: 35.14%;
+  right: 35.14%;
+  top: 62.94%;
+  bottom: 28.81%;
+
+  border-radius: 3px;
+
+  font-family: 'HK Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  border: 0px;
+  /* identical to box height, or 171% */
+
+  /* General/Dark blue */
+
+  color: #171f46;
+  cursor: pointer;
+  outline: none;
+  height: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .detail-failure-view {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    height: 276px;
+    width: 375px;
+    margin-top: 307px;
+    margin-left: 532px;
+  }
+
+  .detail-failure-view-name {
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    height: 31px;
+    width: 430px;
+    margin-top: 615px;
+    margin-left: 505px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 31px;
+  }
+
+  .detail-failure-button {
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    height: 48px;
+    width: 107px;
+    margin-top: 670px;
+    margin-left: 665px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}

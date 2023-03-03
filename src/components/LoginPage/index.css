@@ -1,25 +1,17 @@
 .login-page-container {
+  position: relative;
   width: 360px;
   height: 700px;
-  background: #131313;
-  padding-top: 32px;
-  padding-left: 32px;
-  padding-right: 32px;
-}
 
-@media screen and (min-width: 768px) {
-  .login-page-container {
-    background-image: url(https://res.cloudinary.com/duezhxznc/image/upload/v1676700622/netfilx_1_n0wgvp.png);
-    width: 1440px;
-    height: 1024px;
-    padding: 0px;
-  }
+  background: #131313;
 }
 
 .movies-heading1 {
-  width: 100px;
-  height: 27px;
-  margin-bottom: 105px;
+  position: absolute;
+  left: 8.89%;
+  right: 63.33%;
+  top: 5%;
+  bottom: 90.78%;
 }
 
 @media screen and (min-width: 768px) {
@@ -28,6 +20,7 @@
     width: 1440px;
     height: 1024px;
     padding: 0px;
+    position: absolute;
   }
 
   .movies-heading1 {
@@ -36,40 +29,68 @@
     margin-top: 48px;
     margin-left: 165px;
     margin-bottom: 192px;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 90.78%;
   }
 }
 
-.login-form {
-  display: flex;
-  flex-direction: column;
-}
-
 .form-heading {
-  height: 40px;
-  width: 80px;
+  position: absolute;
+  left: 8.89%;
+  right: 68.89%;
+  top: 25.62%;
+  bottom: 68.12%;
+
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
   line-height: 40px;
-  color: #ffffff;
+  /* identical to box height, or 125% */
+
   display: flex;
   align-items: center;
-  margin-bottom: 24px;
+
+  /* General/White */
+
+  color: #ffffff;
+}
+
+.username-container {
+  position: absolute;
+  left: 8.89%;
+  right: 8.89%;
+  top: 35.62%;
+  bottom: 54.38%;
+}
+.password-container {
+  position: absolute;
+  left: 8.89%;
+  right: 8.89%;
+  top: 48.12%;
+  bottom: 41.88%;
 }
 
 .username-label {
-  height: 16px;
+  position: absolute;
   width: 65px;
+  height: 16px;
+  left: 0px;
+  top: 0px;
+
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
   font-size: 12px;
   line-height: 16px;
+  /* identical to box height, or 133% */
+
   letter-spacing: 0.01em;
   text-transform: uppercase;
+
   color: #ffffff;
-  margin-bottom: 8px;
 }
 
 @media screen and (min-width: 768px) {
@@ -80,68 +101,114 @@
     opacity: 0.8;
     border-radius: 8px;
     margin-left: 492px;
+    margin-top: 292px;
   }
   .form-heading {
-    margin-left: 189px;
-    margin-top: 64px;
-    margin-bottom: 32px;
+    position: absolute;
     width: 78px;
     height: 40px;
+    left: 681px;
+    top: 330px;
+
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+    /* identical to box height, or 125% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    /* General/White */
+
+    color: #ffffff;
   }
 }
 
 .username-input {
+  position: absolute;
   height: 40px;
+  left: 0%;
+  right: 0%;
+  top: 24px;
+
   background: #333333;
   border-radius: 2px;
-  border: 0px;
   font-family: 'HK Grotesk';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
+  /* identical to box height, or 171% */
+
+  /* Light / blue-gray / 200 */
+
   color: #e2e8f0;
-  padding-left: 16px;
-  margin-bottom: 16px;
   outline: none;
+  border: 0px;
+  padding: 8px 12px;
 }
 
 .password-label {
-  height: 16px;
+  position: absolute;
   width: 65px;
+  height: 16px;
+  left: 0px;
+  top: 0px;
+
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
   font-size: 12px;
   line-height: 16px;
+  /* identical to box height, or 133% */
+
   letter-spacing: 0.01em;
   text-transform: uppercase;
+
   color: #ffffff;
-  margin-bottom: 8px;
 }
 
 .password-input {
+  position: absolute;
   height: 40px;
+  left: 0%;
+  right: 0%;
+  top: 24px;
+
   background: #333333;
   border-radius: 2px;
-  border: 0px;
   font-family: 'HK Grotesk';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
+  /* identical to box height, or 171% */
+
+  /* Light / blue-gray / 200 */
+
   color: #e2e8f0;
-  padding-left: 16px;
   outline: none;
+  border: 0px;
+  padding: 8px 12px;
 }
 .form-button-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 20px;
+  gap: 10px;
+
+  position: absolute;
+  left: 8.89%;
+  right: 8.89%;
+  top: 63.12%;
+  bottom: 30.62%;
+
   background: #e50914;
   border-radius: 4px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  margin-top: 32px;
 }
 
 .form-button {
@@ -152,53 +219,93 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 24px;
-  color: #ffffff;
-  background-color: transparent;
-  border: 0px;
-  margin-top: 8px;
-  margin-bottom: 8px;
-  margin-left: 20px;
-  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  flex: none;
+  justify-content: center;
+  order: 0;
+  flex-grow: 1;
   cursor: pointer;
   outline: none;
+  border: 0px;
+  background: transparent;
+  color: #ffffff;
 }
 
 .error-msg {
+  position: absolute;
+  left: 8.89%;
+  top: 57%;
+  bottom: 37.5%;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
   color: #dc2626;
-  margin-top: 12px;
-  margin-bottom: 0px;
 }
 
 @media screen and (min-width: 768px) {
+  .username-container {
+    position: absolute;
+    width: 360px;
+    height: 64px;
+    left: 540px;
+    top: 428px;
+  }
+
   .username-label {
-    margin-left: 48px;
+    position: absolute;
+    width: 65px;
+    height: 16px;
+    left: 0px;
+    top: 0px;
   }
 
   .username-input {
-    margin-left: 48px;
+    position: absolute;
+    height: 40px;
+    left: 0%;
+    right: 0%;
+    top: 24px;
+  }
+
+  .password-container {
+    position: absolute;
     width: 360px;
+    height: 64px;
+    left: 540px;
+    top: 516px;
   }
 
   .password-label {
-    margin-left: 48px;
+    position: absolute;
+    width: 65px;
+    height: 16px;
+    left: 0px;
+    top: 0px;
   }
 
   .password-input {
-    margin-left: 48px;
-    width: 360px;
+    position: absolute;
+    height: 40px;
+    left: 0%;
+    right: 0%;
+    top: 24px;
   }
 
   .form-button-container {
-    margin-left: 48px;
     width: 360px;
+    height: 40px;
+    left: 540px;
+    top: 628px;
   }
 
   .error-msg {
-    margin-left: 48px;
+    position: absolute;
+    width: 360px;
+    height: 18px;
+    left: 540px;
+    top: 592px;
   }
 }

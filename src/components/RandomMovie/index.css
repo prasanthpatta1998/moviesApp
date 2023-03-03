@@ -134,9 +134,7 @@
 }
 .failure-view {
   margin-top: 15px;
-  margin-left: 41px;
   height: 16px;
-  width: 215px;
 
   font-family: 'HK Grotesk';
   font-style: normal;
@@ -147,6 +145,7 @@
 
   color: #ffffff;
   text-align: center;
+  width: 296px;
 }
 .random-failure-button {
   display: flex;
