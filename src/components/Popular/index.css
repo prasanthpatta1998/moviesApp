@@ -1,6 +1,6 @@
 .popular-container {
   position: relative;
-  width: 360px;
+  width: 100%;
   min-height: 772px;
   background: #131313;
 }
