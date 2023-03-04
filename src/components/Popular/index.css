@@ -3,6 +3,8 @@
   width: 100%;
   min-height: 772px;
   background: #131313;
+  display: flex;
+  justify-content: center;
 }
 
 .popular-movie-image {
@@ -275,8 +277,6 @@
 
 .pagination-buttons {
   position: absolute;
-  left: 33.89%;
-  right: 33.61%;
   top: 80%;
   bottom: 21.89%;
   display: flex;

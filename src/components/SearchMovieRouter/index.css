@@ -3,6 +3,8 @@
   height: 100vh;
   width: 100%;
   position: absolute;
+  display: flex;
+  justify-content: center;
 }
 
 .search-ul-item {
@@ -115,8 +117,6 @@
 
 .search-invalid-view {
   position: absolute;
-  left: 20.83%;
-  right: 20.97%;
   top: 30.62%;
   bottom: 41.88%;
 }
@@ -211,8 +211,6 @@
 
 .search-pagination-buttons {
   position: absolute;
-  left: 33.89%;
-  right: 33.61%;
   top: 90.25%;
   bottom: 3%;
   display: flex;

@@ -58,7 +58,7 @@ class MovieDetailsRouter extends Component {
         }
         this.setState({
           movieData: newData,
-          movieStatus: movieApiStatus.failure,
+          movieStatus: movieApiStatus.success,
         })
       } else {
         this.setState({movieStatus: movieApiStatus.failure})
