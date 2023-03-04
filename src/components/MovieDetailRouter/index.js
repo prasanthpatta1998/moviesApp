@@ -1,5 +1,4 @@
 import {Component} from 'react'
-import {Link} from 'react-router-dom'
 import Loader from 'react-loader-spinner'
 import {FaGoogle, FaTwitter, FaInstagram, FaYoutube} from 'react-icons/fa'
 import format from 'date-fns/format'
@@ -57,8 +56,10 @@ class MovieDetailsRouter extends Component {
           voteAverage: data.movie_details.vote_average,
           voteCount: data.movie_details.vote_count,
         }
-        console.log(newData)
-        this.setState({movieData: newData, movieStatus: movieApiStatus.success})
+        this.setState({
+          movieData: newData,
+          movieStatus: movieApiStatus.failure,
+        })
       } else {
         this.setState({movieStatus: movieApiStatus.failure})
       }
@@ -83,15 +84,13 @@ class MovieDetailsRouter extends Component {
         {similarMoviesList.map(eachMovie => {
           const {id, backdropPath, title} = eachMovie
           return (
-            <Link to={`/movies/${id}`}>
-              <li className="similar-li-item" key={eachMovie.id}>
-                <img
-                  src={backdropPath}
-                  alt={title}
-                  className="similar-poste-path"
-                />
-              </li>
-            </Link>
+            <li className="similar-li-item" key={id}>
+              <img
+                src={backdropPath}
+                alt={title}
+                className="similar-poste-path"
+              />
+            </li>
           )
         })}
       </ul>

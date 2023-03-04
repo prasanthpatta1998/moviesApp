@@ -40,7 +40,6 @@
 }
 
 .original-slick-container {
-  max-width: 360px;
   margin-top: 10px;
   margin-top: 12px;
   position: absolute;
@@ -95,11 +94,17 @@
   bottom: 11.12%;
   background: #0d0d0d;
   border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .Original-loader {
-  margin-top: 35px;
-  margin-left: 130px;
+  position: absolute;
+  left: 45.56%;
+  right: 45.56%;
+  top: 28.07%;
+  bottom: 44.65%;
 }
 
 @media screen and (min-width: 768px) {
@@ -113,7 +118,10 @@
     border-radius: 8px;
   }
   .Original-loader {
-    margin-top: 69px;
-    margin-left: 538px;
+    position: absolute;
+    left: 48.33%;
+    right: 48.33%;
+    top: 38.58%;
+    bottom: 39.87%;
   }
 }

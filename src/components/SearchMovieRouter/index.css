@@ -32,12 +32,12 @@
 }
 
 .search-loader-container {
+  display: flex;
+  justify-content: center;
 }
 
 .search-failure-view {
   position: absolute;
-  left: 17.78%;
-  right: 17.5%;
   top: 27.81%;
   bottom: 45.31%;
   height: 172px;
@@ -213,7 +213,7 @@
   position: absolute;
   left: 33.89%;
   right: 33.61%;
-  top: 93.25%;
+  top: 90.25%;
   bottom: 3%;
   display: flex;
   height: 24px;

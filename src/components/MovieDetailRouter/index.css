@@ -469,9 +469,6 @@
   border-radius: 8px;
 }
 
-.contact-icons-container-movie {
-}
-
 .google-icon {
   font-family: 'Font Awesome 5 Brands';
   font-style: normal;
@@ -481,6 +478,7 @@
   text-align: center;
 
   color: #ffffff;
+  z-index: 1;
 
   /* identical to box height */
 }
@@ -900,10 +898,13 @@
   }
 }
 
+.detail-loader-container {
+  display: flex;
+  justify-content: center;
+}
+
 .detail-failure-view {
   position: absolute;
-  left: 17.78%;
-  right: 17.5%;
   top: 35.81%;
   bottom: 45.31%;
   height: 172px;
